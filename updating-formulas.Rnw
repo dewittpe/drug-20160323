@@ -1,0 +1,130 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% file:    
+% authors: Peter DeWitt, peter.dewitt@ucdenver.edu
+%          Tell Bennett, tell.bennett@ucdenver.edu
+%
+% Slides for a talk on reproducible research given at ACCORDS 6 April 2016.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt]{beamer}
+\usefonttheme{serif}
+\usepackage[T1]{fontenc}
+\usepackage{verbatim}
+\usepackage{url}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title Page Setup
+\author{Peter~DeWitt\\\url{https://www.github.com/dewittpe}}
+\title[]{{\scshape Updating Formulas}}
+\institute[]{Denver R Users Group}
+\date{23 March 2016}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document} 
+
+<<include = FALSE>>=
+library(magrittr)
+library(knitr)
+opts_chunk$set(size = "footnotesize")
+
+read_chunk("chunks.R")
+@
+
+\begin{frame}[t,plain]
+  \titlepage
+  \centering
+  \includegraphics[width=0.70\textwidth]{denver_lightning}
+\end{frame}
+
+\begin{frame}[t,fragile]
+  \frametitle{The {\tt update} function}
+  \begin{itemize}
+    \item Extremely useful for making quick changes to objects.
+    \item The {\tt update} function is an S3 method found in the {\tt stats}
+      package.
+    \item Other {\tt update} methods are found in other packages.
+  \end{itemize}
+<<chunk01>>=
+@
+\end{frame}
+
+\begin{frame}[t,fragile]
+  \frametitle{Example: update formula in the linear model}
+<<chunk02>>=
+@
+\end{frame}
+
+\begin{frame}[t,fragile]
+  \frametitle{Example: update formula in the linear model}
+<<chunk03>>=
+@
+\end{frame}
+
+\begin{frame}[t,fragile]
+  \frametitle{Example: update data set in the linear model}
+<<chunk04>>=
+@
+\end{frame}
+
+\begin{frame}[t,fragile]
+  \frametitle{Example: update multiple parts of an object}
+<<chunk05>>=
+@
+\end{frame}
+
+\begin{frame}[t,fragile]
+  \frametitle{Example: Discretization of {\tt carat}}
+<<chunk06>>=
+@
+\end{frame}
+
+\begin{frame}[t,fragile]
+  \frametitle{Example: Discretization of {\tt carat}}
+<<chunk07>>=
+@
+\end{frame}
+
+\begin{frame}[t,fragile]
+\frametitle{Example: Change the arguments passed to {\tt cut}}
+<<chunk08>>=
+@
+\end{frame}
+
+\begin{frame}[t,fragile]
+  \frametitle{Want: Update the breaks in the {\tt formula} passed to {\tt lm}}
+<<chunk09>>=
+@
+\end{frame}
+
+\begin{frame}[t,fragile]
+  \frametitle{Old, Update, and Updated {\tt call}s}
+<<chunk10>>=
+@
+\end{frame}
+
+\begin{frame}[t,fragile]
+  \frametitle{New Regression Coefficients}
+<<chunk11>>=
+@
+\end{frame}
+
+\begin{frame}[t,fragile]
+  \frametitle{Wrap Up}
+  \begin{itemize}
+    \item Functions like {\tt new\_breaks} are very useful when running
+      automated tasks, perhaps searching for an `optimum' binning of {\tt
+      carat}?
+    \item A great exercise for dealing with
+      \begin{itemize}
+        \item Non-standard evaluation (see ``Advanced R'' by Wickham
+          \url{http://adv-r.had.co.nz/Computing-on-the-language.html})
+        \item Recursion 
+        \item Working with {\tt environments}
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% end of file
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
