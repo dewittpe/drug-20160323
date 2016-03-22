@@ -27,20 +27,20 @@ update(fit,
 ## @knitr chunk06
 # Carat is on the rhs as a continuous and categorical variable
 update(fit, 
-       formula = . ~ . + cut(carat, breaks = c(0, 0.5, 1.0, 2.0, 5.0))) %>%
-magrittr::extract("call")
+       formula = . ~ . + cut(carat, breaks = c(0, 0.5, 1.0, 2.0, 5.0))
+       )$call
 
 # cut and color are missing from the rhs
 update(fit, 
-       formula = . ~ cut(carat, breaks = c(0, 0.5, 1.0, 2.0, 5.0))) %>%
-magrittr::extract("call")
+       formula = . ~ cut(carat, breaks = c(0, 0.5, 1.0, 2.0, 5.0))
+       )$call
 
 ## @knitr chunk07
 # correct specification
 fit <- update(fit, 
               formula = . ~ . - carat + 
                             cut(carat, breaks = c(0, 0.5, 1.0, 2.0, 5.0)))
-fit %>% magrittr::extract("call")
+fit$call
 
 ## @knitr chunk08
 # this does not work.  breaks needs to be passed to cut
@@ -50,12 +50,10 @@ update(fit, breaks = c(0, 2, 5))
 # Worth it?
 update(fit, 
        formula = . ~ . - cut(carat, breaks = c(0, 0.5, 1.0, 2.0, 5.0)) +
-                         cut(carat, breaks = c(0, 2.0, 5.0))) %>%
-magrittr::extract("call")
-
+                         cut(carat, breaks = c(0, 2.0, 5.0))
+       )$call
 
 ## @knitr chunk09
-
 # Define a function new_breaks to update the breaks argument in cut 
 # within a formula.
 new_breaks <- function(form, brks) { 
