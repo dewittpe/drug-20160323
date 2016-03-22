@@ -13,7 +13,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title Page Setup
-\author{Peter~DeWitt\\\url{https://www.github.com/dewittpe}}
+\author{Peter~DeWitt\\\url{https://www.github.com/dewittpe/drug-20160323}}
 \title[]{{\scshape Updating Formulas}}
 \institute[]{Denver R Users Group}
 \date{23 March 2016}
