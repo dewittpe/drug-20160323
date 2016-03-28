@@ -1,5 +1,5 @@
 # Updating Formulas
-A lightning talk presented to the Denver R User Group on 23 March 2016.
+A lightning talk presented to the Denver R User Group on 30 March 2016.
 
 The talk aims to 
 * Give examples of using the `update` function in R to update an object.

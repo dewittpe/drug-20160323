@@ -13,10 +13,10 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title Page Setup
-\author{Peter~DeWitt\\\url{https://www.github.com/dewittpe/drug-20160323}}
+\author{Peter~DeWitt\\\url{https://www.github.com/dewittpe/drug-20160330}}
 \title[]{{\scshape Updating Formulas}}
 \institute[]{Denver R Users Group}
-\date{23 March 2016}
+\date{30 March 2016}
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document} 
@@ -98,12 +98,6 @@ read_chunk("chunks.R")
 \begin{frame}[t,fragile]
   \frametitle{Old, Update, and Updated {\tt call}s}
 <<chunk10>>=
-@
-\end{frame}
-
-\begin{frame}[t,fragile]
-  \frametitle{New Regression Coefficients}
-<<chunk11>>=
 @
 \end{frame}
 
